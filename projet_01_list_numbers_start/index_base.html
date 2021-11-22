@@ -28,9 +28,14 @@
 <body>
     <h1>Listes nombres</h1>
     <ul class="numbers">
-        <li>A= <span>1</span></li>
+        <li>A=<span>1</span></li>
         <li>B=<span>2</span></li>
         <li>C=<span>3</span></li>
+        <li>D=<span>4</span></li>
+        <li>E=<span>5</span></li>
+        <li>F=<span>6</span></li>
+        <li>G=<span>7</span></li>
+        <li>H=<span>8</span></li>
     </ul>
 
     <script>
@@ -38,30 +43,36 @@
         let els = document.querySelectorAll('.numbers > li'); // un tableau des li
         console.log(els[0]);
 
-        let a = 1 ;
-        let b = 3 ;
-        let tmp ;
+        let a = 1;
+        let b = 3;
+        let tmp;
         console.log('a,', a, 'b', b);
-
         tmp = a;
         a = b;
-        b = tmp ;
+        b = tmp;
         console.log('a,', a, 'b', b);
-
         // syntaxe moderne
-        [a,b] = [b, a];
+        [a, b] = [b, a];
         console.log('a,', a, 'b', b);
-
 
         console.log(els[0].querySelector('span').innerHTML);
         // Exercice inversez respectivement l'ordre des valeurs dans les span
         // 1 2 3 -> 3 2 1
 
-        for(const el of els) console.log(el);
+        // [
+        //     els[0].querySelector('span').innerHTML,
+        //     els[1].querySelector('span').innerHTML,
+        //     els[2].querySelector('span').innerHTML,
+        // ] = [
+        //     els[2].querySelector('span').innerHTML,
+        //     els[1].querySelector('span').innerHTML,
+        //     els[0].querySelector('span').innerHTML,
+        // ]
 
-        els[0].querySelector('span').innerHTML = els[2].querySelector('span').innerHTML;
-
-        console.log(typeof els );
+        // dynamique 
+        for (let i = 0; i < els.length; i++) {
+            els[i].querySelector('span').innerHTML = els.length - i ;
+        }
     </script>
 </body>
 
