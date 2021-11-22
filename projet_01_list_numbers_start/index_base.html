@@ -38,9 +38,18 @@
         let els = document.querySelectorAll('.numbers > li'); // un tableau des li
         console.log(els[0]);
 
+        let a = 1 ;
+        let b = 3 ;
+        a = b ;
+        b = a ;
+
         console.log(els[0].querySelector('span').innerHTML);
         // Exercice inversez respectivement l'ordre des valeurs dans les span
         // 1 2 3 -> 3 2 1
+
+        for(const el of els) console.log(el);
+
+        console.log(typeof els );
     </script>
 </body>
 
