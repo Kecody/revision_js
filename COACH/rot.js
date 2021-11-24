@@ -8,3 +8,5 @@ for(const ch of secret_key){
 }
 
 console.log(letters);
+
+// join en JS
