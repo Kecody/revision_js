@@ -10,3 +10,8 @@ for(const ch of secret_key){
 console.log(letters);
 
 // join en JS
+
+const letters_str = letters.join('');
+const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// Essaye de retirer les lettres qui se trouvent dans letters dans alphabets
