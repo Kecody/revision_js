@@ -1,25 +1,10 @@
 const secret_key = "MULTIMEDIA";
+const letters = [];
 
-const alphabets = [];
+for(const ch of secret_key){
+    if(letters.includes(ch)) continue ;
 
-for (const ch of secret_key) {
-    if (alphabets.includes(ch)) continue;
-    alphabets.push(ch);
-}
-console.log(alphabets);
-
-const letters = alphabets.join(''); //new secret key
-
-const Alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const sanitize = [];
-
-for (const ch of Alphabets) {
-    if (alphabets.includes(ch)) {
-        continue;
-    }
-    sanitize.push(ch);
+    letters.push(ch);
 }
 
-const res = letters + sanitize.join('')
-
-document.write(`<h3>Alphabet crypté : ${res}</h3>`);
+console.log(letters);
