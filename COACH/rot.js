@@ -8,7 +8,6 @@ for(const ch of secret_key){
 }
 
 console.log(letters);
-
 // join en JS
 
 const letters_str = letters.join('');
@@ -24,4 +23,14 @@ for(const ch of alphabets){
     sanitize.push(ch);
 }
 
-document.write(`<h3>Alphabet crypté : ${letters + sanitize.join('')}</h3>`);
+const res = letters + sanitize.join('') ;
+
+// document.write(`<h3>Alphabet crypté : ${res}</h3>`);
+
+// Code ASCII 
+const code = [];
+for(const i in res){
+    code.push(res.charCodeAt(i));
+}
+
+console.log(code);
