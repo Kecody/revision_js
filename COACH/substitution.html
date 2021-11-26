@@ -42,13 +42,12 @@
             const letter_cryp = alphabet_crypted.charAt(pos) ;
             console.log(letter_clear, '-->', letter_cryp);
             message_crypted = message_crypted.replaceAll(letter_clear, letter_cryp.toLowerCase());
-
         }
 
        
 
 
-        document.write(`<h3>${message_crypted}</h3>`); //the result is wrong...what went wrong?
+        document.write(`<h3>${message_crypted.toUpperCase()}</h3>`); //the result is wrong...what went wrong?
     </script>
 
 </body>
