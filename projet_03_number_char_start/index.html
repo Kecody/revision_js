@@ -21,6 +21,7 @@
             color: palevioletred;
             padding: 3px;
         }
+
         .warning {
             color: purple;
             padding: 3px;
@@ -36,13 +37,23 @@
         <input type="text" id="phrase" class="phrase">
         <input type="submit" value="Calculer" class="submitPhrase">
     </div>
-    <div >
-        <p class="message"></p>
-        <p class="result"></p>
+    <div></div>
         <p class="numberWord"></p>
     </div>
     <script>
-        // code ...
+        let elInput = document.querySelector('.phrase');
+
+        // une fonction de callback que l'on passera à addEventListener
+        function eventInput(event) {
+            let value = event.target.value;
+
+            console.log(value);
+        }
+
+        // On écoute les changement des inputs
+        elInput.addEventListener('input', eventInput);
+
+        // click 
     </script>
 </body>
 
