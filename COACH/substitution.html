@@ -36,19 +36,16 @@
         alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         console.log(alphabet);
 
-        // on passe en revue chaque lettre de l'alphabet
-        const verif = [];
-        for (let i = 0; i < alphabet.length; i++) {
-            const letter = alphabet_crypted.charAt(i);
+        for (let i = 0; i < message_crypted.length; i++) {
+            const letter_clear = alphabet[i];
+            const pos = alphabet.indexOf(letter_clear);
+            const letter_cryp = alphabet_crypted.charAt(pos) ;
+            console.log(letter_clear, '-->', letter_cryp);
+            message_crypted = message_crypted.replaceAll(letter_clear, letter_cryp.toLowerCase());
 
-            if (verif.includes(alphabet[i]) === false && message_crypted.includes(alphabet[i])) {
-                message_crypted = message_crypted.replaceAll(alphabet[i], letter);
-            }
-
-            verif.push(letter);
         }
 
-        console.log(message_crypted);
+       
 
 
         document.write(`<h3>${message_crypted}</h3>`); //the result is wrong...what went wrong?
