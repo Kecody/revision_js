@@ -41,19 +41,28 @@
         <p class="numberWord"></p>
     </div>
     <script>
+        // les variables qui sont définies à l'extérieur du script sont globales
+        // les fonctions peuvent y accéder
         let elInput = document.querySelector('.phrase');
+        let numberW = document.querySelector('.numberWord');
+        let calInput = document.querySelector('.submitPhrase');
+        let content = { text : '', nb : 0 }; // portée globale au script 
 
         // une fonction de callback que l'on passera à addEventListener
         function eventInput(event) {
             let value = event.target.value;
-
-            console.log(value);
+            content.text = value;
+            content.nb = value.length;
         }
 
-        // On écoute les changement des inputs
+        // On écoute les changement des inputs, eventInput une fonction de callback
         elInput.addEventListener('input', eventInput);
 
-        // click 
+        calInput.addEventListener('click', function(event){
+            const text = content.text ;
+            const nb = content.nb;
+            numberW.innerHTML = `TEXT : ${text}, LONGUEUR : ${nb}`;
+        })
     </script>
 </body>
 

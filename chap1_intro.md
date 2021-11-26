@@ -164,3 +164,7 @@ Si on a le temps ...
 3. Gérez le cas où l'utilisateur saisit une chaîne de caractères vide et qu'il clique sur "Calculer". Affichez dans ce cas un message d'erreur.
 
 4. L'utilisateur peut saisir des mots et introduire des espaces avant, après et entre les mots, ce qui fausse le calcul du nombre de mot(s). Trouvez une solution pour nettoyer la phrase saisie afin de compter le bon nombre de mot(s).
+
+## Exercice 04 CRYPTO
+
+Dans la partie COACH modifiez le script pour considérer le cryptage des lettres accentués.

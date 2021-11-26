@@ -34,18 +34,15 @@
 
         // on initialise l'alphabet pour qu'il est de nouveau 26 lettres
         alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        console.log(alphabet);
 
+        // TODO coder le é majuscule en crypté
         for (let i = 0; i < message_crypted.length; i++) {
             const letter_clear = alphabet[i];
             const pos = alphabet.indexOf(letter_clear);
-            const letter_cryp = alphabet_crypted.charAt(pos) ;
+            const letter_cryp = alphabet_crypted.charAt(pos).toLowerCase() ; // minuscule => c'est fait et plus à faire
             console.log(letter_clear, '-->', letter_cryp);
-            message_crypted = message_crypted.replaceAll(letter_clear, letter_cryp.toLowerCase());
+            message_crypted = message_crypted.replaceAll(letter_clear, letter_cryp);
         }
-
-       
-
 
         document.write(`<h3>${message_crypted.toUpperCase()}</h3>`); //the result is wrong...what went wrong?
     </script>
