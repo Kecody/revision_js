@@ -11,7 +11,7 @@
 <body>
     <p>
         Exercise
-        écrire une fonction qui calcule le maximun de trois valeurs, vous appelerez cette fonction max3$a,b,c).
+        écrire une fonction qui calcule le maximun de trois valeurs, vous appelerez cette fonction max3(a,b,c).
         Affichez le max dans le DOM.
     </p>
     <div id="root"></div>
@@ -20,11 +20,15 @@
             b = 8,
             c = 4;
 
-        // il faut essayer de faire le max de 2 valeurs
-        function max_val(a,b){
-            
+        function max_val(a, b){
+            if(a > b){
+                return a;
+            }
+
+            return b ;
         }
 
+        max_val(a, max_val(b,c));
 
     </script>
 </body>
