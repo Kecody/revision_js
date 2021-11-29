@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sequences = [0.918191819189, 0.160000101010];
+        const goodSequence61 = [];
+        for(const sequence of sequences){
+
+            // on a transf
+            const letters = sequence.toString().split('').filter(function(ch){
+                return ch != '.'; 
+            });
+            console.log(letters);
+            // reduce permet ici de faire la somme des valeurs se trouvant dans le tableau sequence
+            const sum = letters.reduce(function(acc, curr){
+                // acc = acc + curr ;
+                return parseInt(acc) + parseInt(curr);
+            });
+
+            console.log(sum);
+            // '1'== 1 vrai, '1' === 1 faux 
+            if(sum === 61 ){
+                goodSequence61.push(sum);
+            }
+        }
+    </script>
+</body>
+</html>
