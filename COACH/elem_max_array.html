@@ -17,21 +17,21 @@
         11, 16,100,9,7,8,19, 2, 10
         ];
     </p>
+    <div id="root"></div>
     <script>
         const data = [
-            11, 16, 100, 9, 7, 8, 19, 2, 10
+            11, 16,100,9,7,8,19, 2, 10
         ];
-
-        let max_num = data.shift();
-
-        for(const num of data){
-            if(num > max_num){
-                max_num = num;
-            }
-        }
-
-        console.log(max_num);
-
+       let candidate = data.shift(); // dépile le premier élément
+       
+       for(const number of data){
+           if(number > candidate){
+               candidate = number;
+           }
+       }
+       console.log('candidate', candidate);
+       const root = document.getElementById('root');
+       root.innerHTML = candidate;
     </script>
 </body>
 
