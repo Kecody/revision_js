@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const letter = ["G", "B"]
+        const letter_voy = ["a", "e", "i", "o", "u"]
+        const letter_con = ["G", "B", "L", "N"]
+
+        const nb_gobelin = 10;
+        let gobelins = {};
+        for (let i = 0; i < nb_gobelin; i++) {
+
+            let gobelin = {
+                age: Math.floor(Math.random() * (35 - 5 + 1)) + 5,
+                sex: Math.random() < 0.58 ? "M" : "F",
+                Tooth: Math.floor(Math.random() * (28 - 17 + 1)) + 17,
+
+            }
+            let j = Math.floor(Math.random() * 5);
+            let name = (Math.random() < 0.5 ? "G" : "B") + letter_voy[j];
+            
+            let maxSyllabe = Math.floor(Math.random() * 3) + 1;
+
+            // construction des syllabes
+            let syllabe = '';
+            let m = Math.floor(Math.random() * 5); // indice du tableau entre 0, 4
+            let l = Math.floor(Math.random() * 4); // indice du tableau entre 0, 3
+            while(maxSyllabe>0){
+                syllabe = syllabe +  letter_con[l] +  letter_voy[m]; // deux lettres 
+                maxSyllabe--;
+            }
+
+            name = name + syllabe;
+            // on l'ajoute enfin de le tableau
+            gobelins[name] = gobelin;
+        }
+        console.log(gobelins);
+
+    </script>
+</body>
+
+</html>
