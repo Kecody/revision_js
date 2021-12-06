@@ -24,9 +24,9 @@ $data2d = [
 ];
 
 $count = 0; // variable 
-foreach( $data2d as $data){
-    foreach($data as $num){
-        if($num == 1 ) $count++;
+foreach ($data2d as $data) {
+    foreach ($data as $num) {
+        if ($num == 1) $count++;
     }
 }
 
@@ -39,6 +39,29 @@ echo PHP_EOL;
 $data = [
     [1, 1, 2],
     [11, 12, 21],
-    [1, 1, 1],
+    [1, 1, 1, 1, 1, 1, 1],
     [10, 1, 2],
 ];
+
+$testOne = false;
+
+foreach ($data as $line) {
+    $len = count($line); // longueur du sous tableau
+    $count = 0;
+    foreach ($line as $num) {
+        if ($num == 1) {
+            $count++;
+        }
+    }
+    // si le nombre de fois que l'on trouve 1 est égale à la longueur du sous-tableau
+    // alors cela veut dire qu'il n'y a que des 1 dans ce sous tableau et dans ce cas on a trouvé
+    // un sous tableau qui vérifie notre condition.
+    if ($count == $len) {
+        $testOne = true;
+        break;
+    }
+}
+
+echo PHP_EOL;
+echo $testOne ? "YES" : "NO";
+echo PHP_EOL;
