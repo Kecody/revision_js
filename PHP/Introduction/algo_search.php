@@ -22,3 +22,23 @@ $data2d = [
     [11, 1, 2],
     [10, 1, 2],
 ];
+
+$count = 0; // variable 
+foreach( $data2d as $data){
+    foreach($data as $num){
+        if($num == 1 ) $count++;
+    }
+}
+
+echo PHP_EOL;
+echo $count;
+echo PHP_EOL;
+
+// Exercice 
+// Vérifiez si dans le tableau data il existe un sous-tableau contenant que des 1
+$data = [
+    [1, 1, 2],
+    [11, 12, 21],
+    [1, 1, 1],
+    [10, 1, 2],
+];
