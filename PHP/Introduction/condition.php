@@ -35,10 +35,24 @@ $exp9 = (false || false) && (!false && false) || true ;
 // false && false || true
 // false || true = true
 
-$exp10 = 3*3.5 > 10 ;
-$exp11 = 3*7  == 21 ;
-$exp12 = 3-1 >= 1;
+$exp10 = 3*3.5 > 10 ; // true
+// la multiplication est prioritaire sur l'opérateur de comparaison
+
+$exp11 = 3*7  == 21 ; // true 
+// la multiplication pp par rapport à ==
+
+$exp12 = 3 - 1 > 1;
+// les opérateurs arithmétiques sont propriétaires par rapport au l'opérateur de comparaison
+
 $exp13 = 0 < pow(2,10) == pow(2,10);
+// true 
+
 $exp14 = !(!true);
+// !(false) = true
+
 $exp15 = (5.5*2 == 11 || 1/2 != .5) && (3%2 == 0);
+// (true || false) && false = true && false = false
+
 $exp16 = (5.5*2 == 11 || 1/2 != .5) && (3%2 != 0);
+// (true || false) && true 
+// true && true = true
