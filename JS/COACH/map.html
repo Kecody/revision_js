@@ -26,8 +26,11 @@
         const prices = [100, 289, 100];
     </p>
     <p>
-       retournez le tableau des prix augmentés de 10%
+       1. retournez le tableau des prix augmentés de 10%
     </p>
+    <p>
+        2. Créez une fonction qui permet de définir une augmentation pour tableau de price.
+     </p>
 <body>
     <script>
         // Exemple
@@ -61,6 +64,16 @@
         });
 
         console.log(sumNotes);
+
+        // exercice 3
+        const prices = [100, 289, 100];
+
+        const newPrices = prices.map(function(price){
+
+            return Math.floor( price * 1.1 * 10 ) /10 ;
+        });
+
+        console.log(newPrices);
     </script>
 </body>
 
