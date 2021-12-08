@@ -15,11 +15,18 @@
     tableau.</p>
     <p>Exercice 02</p>
     <p>Soit le tableau de valeurs suivants : <br />
-        const notes = [[10, 12],[ 11, 100],[ 20, 30]];
+        const notes = [[10, 12],[ 11, 100,9],[ 20, 30]];
     </p>
     <p>
         Retournez un tableau d'une dimension en faisant la somme de chaque sous tableau.
-        On devrait avoir [22, 111, 50]
+        On devrait avoir [22, 120, 50]
+    </p>
+    <p>Exercice 03</p>
+    <p>Soit le tableau de valeurs suivants : <br />
+        const prices = [100, 289, 100];
+    </p>
+    <p>
+       retournez le tableau des prix augmentés de 10%
     </p>
 <body>
     <script>
@@ -30,7 +37,7 @@
 
             return num ** 2;
         });
-        console.log(powerNumbers);
+        console.log(exPowerNumbers);
 
         // 01 Exercice 
         const numbers = [11,2, 8,19, 20];
@@ -42,6 +49,18 @@
             return num**3 ;
         });
 
+        const notes = [[10, 12],[ 11, 100, 9],[ 20, 30]];
+
+        const sumNotes = notes.map(function(n){
+            let total = 0;
+            for(const num of n){
+                total += num;
+            }
+
+            return total;
+        });
+
+        console.log(sumNotes);
     </script>
 </body>
 
