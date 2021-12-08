@@ -31,5 +31,6 @@ for ($i = 0; $i < strlen($message); $i++) {
 }
 
 echo PHP_EOL;
+// on ne peut pas faire un echo d'un tableau il faut utiliser print_r
 print_r($letters);
 echo PHP_EOL;
