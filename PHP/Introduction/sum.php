@@ -47,4 +47,22 @@ echo $sum;
 echo PHP_EOL;
 
 // 3 Exercice 
-// Faites la somme des nombres multiples de 11 et de 3 compris entre 0 et 1000
+// 3.1 Faites la somme des nombres multiples de 11 
+// 3.2 Faites la somme des nombres multiples de 3
+// 3.3 Faites la somme des nombres multiples de 11 et 3
+
+// modulo % si le reste est 0 alors c'est un multiple
+
+// 3.1 on peut également l'utiliser avec le modulo
+$sum = 0;
+for($i=0; $i < 1000; $i = $i++){
+    if($i % 11 == 0){
+        $sum = $sum + $i ; 
+    }
+}
+
+// 3.1 plus simple en utilisant la boucle
+$sum = 0;
+for($i=0; $i < 1000; $i = $i + 11){
+    $sum = $sum + $i ; 
+}
