@@ -28,7 +28,11 @@ Exercice
 */
 
 $calculatrice = new Calcul();
-$calculatrice->add(1,2);
 
+$calculatrice->add(1,2);
+echo $calculatrice->getResult();
+echo PHP_EOL;
+
+echo $calculatrice->sum([1,2,3,4,5]);
 echo $calculatrice->getResult();
 echo PHP_EOL;
