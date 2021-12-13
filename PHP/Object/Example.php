@@ -22,6 +22,11 @@ class Car{
     public function showHello(){
         echo "Hello";
     }
+
+    public function getModel(){
+
+        return $this->model;
+    }
 }
 
 // DANS LA RUE DANS LA VIE DEHORS <=> SCRIPT COURANT
@@ -44,3 +49,12 @@ echo PHP_EOL;
 Exercice
 Créez une méthode qui permet d'afficher le modèle de votre voiture (objet) définit à l'instanciation de la classe 
 */
+
+echo $teslaS->getModel();
+echo PHP_EOL;
+
+echo $tesla3->getModel();
+echo PHP_EOL;
+
+echo $teslaX->getModel();
+echo PHP_EOL;
