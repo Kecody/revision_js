@@ -10,8 +10,15 @@ class Cart{
     }
 
     public function total(){
+        $total = 0.0 ;
 
-        return array_sum($this->products);
+        foreach($this->products as $price){
+            $total += $price;
+        }
+
+        return $total;
+        
+        // return array_sum($this->products);
     }
 }
 
