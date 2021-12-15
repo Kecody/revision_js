@@ -33,11 +33,10 @@ class Calcul
 
     public function divide($a, $b)
     {
-        $this->result = 1;
 
         if ($b == 0) return false;
 
-        return round($a / $b, 2);
+        $this->result = round($a / $b, 2);
     }
 
     public function reset(){
