@@ -3,10 +3,12 @@
 class Cart{
     private $products = [];
 
+    private $tva = 0.2;
+
     public function addProduct($price, $quantity){
 
         // on ajoute en arrondissant le prix X  quantité avec deux décimales après la virgule
-        $this->products[] = round ( $price * $quantity, 2 );
+        $this->products[] = round ( (1+$this->tva) * $price * $quantity, 2 );
     }
 
     public function total(){
@@ -17,9 +19,18 @@ class Cart{
         }
 
         return $total;
-        
+
         // return array_sum($this->products);
     }
+
+    public function setTva($tva){
+        $this->tva = $tva ;
+    }
+
+    public function reset(){
+        $this->products = [];
+    }
+
 }
 
 $cart = new Cart;
