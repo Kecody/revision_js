@@ -22,6 +22,7 @@ class Cart{
         // return array_sum($this->products);
     }
 
+    // modification de la tva
     public function setTva($tva){
         $this->tva = $tva ;
     }
@@ -30,7 +31,6 @@ class Cart{
     public function reset(){
         $this->products = [];
     }
-
 }
 
 $cart = new Cart;
