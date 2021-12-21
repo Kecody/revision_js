@@ -33,3 +33,16 @@ while ($count < $max) {
 // Affichez la proba
 echo print_r($nbFace/$max);
 echo PHP_EOL;
+
+/**
+ * Exercice lancer 2 dés
+ * Calculez la proba d'obtenir le couple (3,3), refaites une simulation avec 100000
+ * 
+ * 1. Créez une fonction lancerArray qui lance deux dés et retourne un tableau à deux valeurs
+ * 
+ *  lancerArray() // [1,6] ou [5,2] ou [3,3] ...
+ * 
+ * 2. Calculez cette proba comme dans l'exercice précédent
+ */
+
+ 
