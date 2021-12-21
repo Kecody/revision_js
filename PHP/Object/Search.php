@@ -24,7 +24,7 @@ class Search{
 
     /**
      *  $numbers = [1,7,10, 7, 8 ]
-     *  replace(7, 3)
+     *  replaceAll(7, 3)
      *      7 dans  [1,7,10, 7, 8 ] => true
      *          foreach [7,10, 7, 8  ] => k = 0, v = 1
      *              7 == 1 faux
@@ -54,7 +54,6 @@ class Search{
 
         return null;
     }
-
 
     /**
      *  $numbers = [1,7,10 ]
