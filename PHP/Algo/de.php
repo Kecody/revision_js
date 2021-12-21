@@ -81,3 +81,20 @@ echo PHP_EOL;
  * 
  * 2. Calculez cette proba comme dans l'exercice précédent
  */
+
+$count = 0; // comptez le nombre de fois que vous obtenez 3
+$max = 100000;
+$numFaces = 6;
+$face = 3;
+$nbFace = 0;
+
+while ($count < $max) {
+    $count++;
+    $res = lancerArray();
+    if (($res[0] == 1 && $res[1] == 3) || ($res[0] == 3 && $res[1] == 1) ) {
+        $nbFace++;
+    }
+}
+
+echo print_r($nbFace / $max);
+echo PHP_EOL;
