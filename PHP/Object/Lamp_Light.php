@@ -12,3 +12,47 @@
  * 
  */
 
+class Ligth
+{
+    private $state = "Off";
+
+    public function turn(){
+        if($this->state == "Off") $this->state = "On";
+        else $this->state = "Off";
+    }
+
+    public function getState(){
+        return $this->state;
+    }
+}
+
+class Lamp
+{
+    private $ligth;
+
+    public function __construct($ligth)
+    {
+        $this->ligth = $ligth;
+    }
+
+    public function switch()
+    {
+        $this->ligth->turn(); 
+    }
+
+    public function __toString()
+    {
+        return $this->ligth->getState();
+    }
+}
+
+$lamp = new Lamp(new Ligth);
+$lamp->switch();
+
+echo $lamp;
+echo PHP_EOL;
+
+$lamp->switch();
+
+echo $lamp;
+echo PHP_EOL;
