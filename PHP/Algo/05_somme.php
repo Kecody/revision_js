@@ -39,3 +39,21 @@ for($i=0;$i < count($numbers); $i++){
 
 echo $sum;
 echo PHP_EOL;
+
+// Exercice 3 
+
+// Faire la somme des nombres pairs du tableau suivant, utilisez le modulo $num % 2 == 0 c'est pair et sinon impair
+
+$numbers = [11, 9, 10, 17, 18, 9, 67, 54, 32, 10, 13, 15, 6, 50];
+
+
+// Exercice 4 décrire ce que fait le script suivant en commentaire
+$count = 20; // ... 
+$numbers = []; // ... 
+while($count > 0){ // ... 
+    $count--; // ... 
+    $numbers[] = random_int(1, 100); // ... 
+}
+
+echo print_r($numbers); // ... 
+echo PHP_EOL;
