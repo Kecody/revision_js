@@ -6,7 +6,7 @@
 
 - Bloc 3 – Rendu – date initiale le 14/01/2022 (base de données Laravel projet simplifié)
 
-Bloc 4 – Rendu – date initiale le 04/02/2022 (Vue.js)
+- Bloc 4 – Rendu – date initiale le 04/02/2022 (Vue.js)
 
 Bloc 5 – rendu – date initiale le 18/02/2022
 Bloc final – Jury – travail commun avec les sessions (Graphistes et Chefs de projets)
