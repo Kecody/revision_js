@@ -1,7 +1,7 @@
 <?php
 
 /*
-Exercice
+Exercice 1
 
 Faite la somme des deux tableaux suivants terme à terme
 
@@ -24,3 +24,9 @@ if(count($number1) == count($number2)){
 
 echo print_r($total);
 echo PHP_EOL;
+
+// Exercice 2
+
+// faire la somme des nombres suivants en multipliant à chaque fois par 2, 4, 6, 8, ... chaque nombre à sommer
+// 11*2 12*2 14*4 ... 
+$numbers = [11, 12, 14, 17, 2];
