@@ -71,3 +71,28 @@ echo PHP_EOL;
  */
 
 $datasetNumbers = [1, 55, 2, 3, 71, 25, 4, 5, 6, 7, 8, 9, 10, 11, 12, 18, 23, 100];
+
+$datasetNumbers = [1, 55, 2, 3, 71, 25, 4, 5, 6, 7, 8, 9, 10, 4, 11, 12, 18, 23, 100, 11];
+$unevenNum = [];
+$evenNum = [];
+$len2 = count($datasetNumbers); // length of 18      
+ 
+foreach ($datasetNumbers as $k => $v) { 
+     if (in_array($datasetNumbers[$k], $evenNum)) {
+            continue;         
+     } elseif ( in_array($datasetNumbers[$k], $unevenNum) ) {
+            continue;
+     } elseif ($v % 2 == 0) {
+            $evenNum[] = $datasetNumbers[$k];
+     } else {
+            $unevenNum[] = $datasetNumbers[$k];                
+     }                          
+}     
+            
+echo PHP_EOL;     
+echo PHP_EOL;          
+print_r($evenNum);     
+
+echo PHP_EOL;            
+print_r($unevenNum);     
+echo PHP_EOL; 
