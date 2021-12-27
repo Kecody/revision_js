@@ -8,5 +8,5 @@ $notes = [11, 12, 14, 17, 2];
 
 
 // 2. Calculez la moyenne des notes suivantes en considérant le coéfficient.
-
+// [note,  coefficient] chaque élément du tableau
 $notes = [[11, 2], [12,1], [14,3], [17,2], [2,1]];
