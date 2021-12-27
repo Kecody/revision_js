@@ -56,3 +56,4 @@ $lamp->switch();
 
 echo $lamp;
 echo PHP_EOL;
+
