@@ -14,6 +14,10 @@ $file =  "./Data/titanic.csv" ;
 
 // fclose($handle); // on ferme le fichier lu
 
+// Exercice 01 
+// Comptez le nombre de survivant sur le titanic sachant que survivre 1 et ne pas survivre c'est 0
+
+// indications :
 // Pour lire un fichier csv avec la fonction fgetcsv de PHP
 
 // ré-ouvre la ressource
@@ -34,4 +38,4 @@ echo PHP_EOL ;
 fclose($handle);
 
 // Exercice 01 
-// Comptez le nombre de survivant sur le titanic sachant que survivre 1 et ne pas survivre c'est 0
+// Comptez le nombre d'homme et de femme qui ont survécu
