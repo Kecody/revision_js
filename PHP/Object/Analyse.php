@@ -37,5 +37,29 @@ echo "survived $survived";
 echo PHP_EOL ;
 fclose($handle);
 
-// Exercice 01 
+// Exercice 02 
 // Comptez le nombre d'homme et de femme qui ont survécu
+
+$handle = fopen($file, "r"); 
+
+$data = fgetcsv($handle, 1000, ",");
+print_r($data);
+$survivedMale = 0;
+$survivedFemale = 0;
+
+while( $data = fgetcsv($handle, 1000, ",") ){
+    $sex = strtolower($data[4]);
+    if($sex == 'male') $survivedMale += $data[1];
+    if($sex == 'female') $survivedFemale += $data[1];
+}
+
+echo "Survived Female: $survivedFemale, Male: $survivedMale ";
+echo PHP_EOL ;
+
+
+// 03 Exercice 
+// Créez une classe Titanic avec une méthode qui s'appelle survived elle possède deux paramètre pour spéicifier si on a survécu ou pas et si on est un homme ou une femme.
+
+/*
+$titanic->survived(1,"male"); // surivivant male
+*/
